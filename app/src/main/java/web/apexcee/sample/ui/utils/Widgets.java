@@ -1,4 +1,4 @@
-package web.apexcee.sample.converter;
+package web.apexcee.sample.ui.utils;
 
 public class Widgets {
 

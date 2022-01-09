@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/AndroidStudio/Sample2/app/src/main/res/layout/widget_full_grid.xml" value="0.2234375" />
         <entry key="..\:/Projects/AndroidStudio/Sample2/app/src/main/res/layout/widget_plain_grid.xml" value="0.2234375" />
+        <entry key="..\:/Projects/AndroidStudio/Sample2/app/src/main/res/layout/widget_plain_grid_item.xml" value="0.2234375" />
+        <entry key="..\:/Projects/AndroidStudio/Sample2/app/src/main/res/layout/widget_rounded_grid.xml" value="0.2234375" />
         <entry key="..\:/Projects/AndroidStudio/Sample2/app/src/main/res/layout/widget_rounded_grid_item.xml" value="0.2234375" />
+        <entry key="..\:/Projects/AndroidStudio/Sample2/app/src/main/res/layout/widget_tri_grid.xml" value="0.2234375" />
         <entry key="..\:/Projects/AndroidStudio/Sample2/app/src/main/res/layout/widget_tri_grid_item.xml" value="0.2234375" />
       </map>
     </option>

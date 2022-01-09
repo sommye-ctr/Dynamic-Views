@@ -1,4 +1,4 @@
-package web.apexcee.sample.groupie;
+package web.apexcee.sample.ui.groupie;
 
 import androidx.annotation.NonNull;
 
@@ -6,7 +6,7 @@ import com.xwray.groupie.databinding.BindableItem;
 
 import web.apexcee.sample.R;
 import web.apexcee.sample.databinding.WidgetTriGridBinding;
-import web.apexcee.sample.models.GridModel;
+import web.apexcee.sample.core.models.GridModel;
 
 public class TriGrid extends BindableItem<WidgetTriGridBinding> {
 

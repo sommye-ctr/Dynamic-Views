@@ -1,4 +1,4 @@
-package web.apexcee.sample;
+package web.apexcee.sample.ui.utils;
 
 import android.graphics.Color;
 import android.view.View;

@@ -1,4 +1,4 @@
-package web.apexcee.sample.models;
+package web.apexcee.sample.core.models;
 
 import java.util.List;
 

@@ -1,4 +1,7 @@
-package web.apexcee.sample.converter;
+package web.apexcee.sample.core;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -7,22 +10,28 @@ import com.google.gson.JsonObject;
 import com.xwray.groupie.GroupieAdapter;
 import com.xwray.groupie.databinding.BindableItem;
 
-import web.apexcee.sample.groupie.FullGrid;
-import web.apexcee.sample.groupie.PlainGrid;
-import web.apexcee.sample.groupie.RoundedGrid;
-import web.apexcee.sample.groupie.TriGrid;
-import web.apexcee.sample.models.FullGridModel;
-import web.apexcee.sample.models.GridModel;
+import web.apexcee.sample.ui.utils.Widgets;
+import web.apexcee.sample.ui.groupie.FullGrid;
+import web.apexcee.sample.ui.groupie.PlainGrid;
+import web.apexcee.sample.ui.groupie.RoundedGrid;
+import web.apexcee.sample.ui.groupie.TriGrid;
+import web.apexcee.sample.core.models.FullGridModel;
+import web.apexcee.sample.core.models.GridModel;
 
-public class JsonConverter {
+public class DynamicViewsCore {
 
     private final Gson gson;
 
-    public JsonConverter() {
+    public DynamicViewsCore() {
         gson = new Gson();
     }
 
-    private GroupieAdapter init(String json) {
+    public void initialize(RecyclerView recyclerView, LinearLayoutManager layoutManager, String json) {
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(getGroupieAdaptor(json));
+    }
+
+    private GroupieAdapter getGroupieAdaptor(String json) {
         GroupieAdapter groupieAdapter = new GroupieAdapter();
 
         JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
@@ -48,7 +57,8 @@ public class JsonConverter {
             case Widgets.FULL_GRID:
                 FullGridModel fullGridModel = gson.fromJson(jsonElement, FullGridModel.class);
                 return new FullGrid(fullGridModel);
+            default:
+                throw new RuntimeException("ViewType not found!");
         }
-        return null;
     }
 }
