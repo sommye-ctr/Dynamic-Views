@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sample</string>
+
+    <string name="product_price">\u20b9%s</string>
+</resources>

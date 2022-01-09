@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="web.apexcee.sample.models.GridItemModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            color="@{model.color}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edges"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/widget_roundedGridItem_image"
+                image="@{model.image}"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                app:layout_constraintBottom_toTopOf="@id/widget_roundedGridItem_name"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/widget_roundedGridItem_name"
+                style="@style/ProductName"
+                visibility="@{model.name}"
+                android:layout_height="wrap_content"
+                android:text="@{model.name}"
+                app:layout_constraintBottom_toTopOf="@id/widget_roundedGridItem_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/widget_roundedGridItem_image" />
+
+            <TextView
+                android:id="@+id/widget_roundedGridItem_price"
+                style="@style/ProductName"
+                visibility="@{model.price}"
+                android:layout_height="wrap_content"
+                android:text="@{@string/product_price(model.price)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/widget_roundedGridItem_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

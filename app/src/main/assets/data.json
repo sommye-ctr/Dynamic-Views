@@ -1,0 +1,13 @@
+{
+  "type" : "PlainGrid",
+  "color" : "#ffffff",
+  "heading" : "Top Picks",
+  "items" : [
+    {
+      "name" : "Adidas",
+      "color" : "#ffffff",
+      "price" : "",
+      "image" : "htttps://sjdidsisnneieenejek.jpg"
+    }
+  ]
+}
